@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "micrograd"
+version = "0.1.0"
+description = "A tiny scalar autograd engine with backprop, training, and visualizations."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []  # the core engine is pure Python
+
+[project.optional-dependencies]
+viz = ["matplotlib", "pillow", "graphviz"]        # graph + training animations
+frameworks = ["torch", "jax"]                     # cross-framework comparison
+dev = ["pytest", "torch", "jax", "matplotlib", "pillow", "graphviz"]
+
+[project.scripts]
+micrograd-demo = "micrograd.cli:main"
+
+[tool.setuptools]
+packages = ["micrograd"]

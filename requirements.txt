@@ -1,0 +1,8 @@
+# The core engine (micrograd/engine.py, nn.py) is pure Python and needs nothing.
+# These power the visualizations, training demos, tests, and cross-framework comparison:
+matplotlib
+pillow
+graphviz
+torch
+jax
+pytest
